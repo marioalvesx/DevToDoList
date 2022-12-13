@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList.API\\DevToDoList.API.csproj": {}
+    "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList.API\\DevToDoList.API.csproj": {
+    "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList.API\\DevToDoList.API.csproj",
+        "projectUniqueName": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
         "projectName": "DevToDoList.API",
-        "projectPath": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList.API\\DevToDoList.API.csproj",
+        "projectPath": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
         "packagesPath": "C:\\Users\\mario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList.API\\obj\\",
+        "outputPath": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -41,6 +41,20 @@
           "targetAlias": "net7.0",
           "dependencies": {
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
