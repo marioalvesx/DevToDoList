@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {}
+    "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {}
   },
   "projects": {
-    "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {
+    "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
+        "projectUniqueName": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
         "projectName": "DevToDoList.API",
-        "projectPath": "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
+        "projectPath": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
         "packagesPath": "C:\\Users\\mario\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\obj\\",
+        "outputPath": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,6 +21,7 @@
           "net7.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

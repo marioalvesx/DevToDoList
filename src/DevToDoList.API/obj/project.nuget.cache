@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t52TgvC2rmyVkEmRgam+T9v4ItrqTvRXiZDXWnPEPD3OhNcAwvzoZq/8SogKHJdFmkYaC+COmg9BWEicVr+VWA==",
+  "dgSpecHash": "oB2PchlBnYKupMz0H4S5ZFwc35XMeKjbItA611EpFo8UMWFxPvWfN+hSfw03LMWFmMAwPFS8SL/EpbrAEMhyPA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
+  "projectFilePath": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mario\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\mario\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
