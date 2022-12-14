@@ -4,6 +4,7 @@ using DevToDoList.API.Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
+using Serilog;
 
 namespace DevToDoList.API.Controllers
 {
@@ -21,9 +22,13 @@ namespace DevToDoList.API.Controllers
         public IActionResult GetAll() {
             var devTodos = _context.DevTodos.ToList();
 
+            Log.Information("GetAll is called");
+
+            throw new Exception("GetAll threw an error.");
             return Ok(devTodos);
         }
 
+        
         // api/dev-todo/1 HTTP GET
         [HttpGet("{id}")]
         public IActionResult GetById(int id) {
@@ -38,6 +43,15 @@ namespace DevToDoList.API.Controllers
         }
 
         // api/dev-todo HTTP POST
+        /// <summary>
+        /// Add a To Do task.
+        /// </summary>
+        /// <remarks>
+        ///  { "title": "Clean Architecture", "Description": "Definition and examples.", "IsDone": true }
+        /// </remarks>
+        /// <param name="model">Todo Task data</param>
+        /// <returns>Object created</returns>
+        /// <response code="201">Success</response>
         [HttpPost]
         public IActionResult Post(DevTodoInputModel model) {
             // Talvez retornar BadRequest

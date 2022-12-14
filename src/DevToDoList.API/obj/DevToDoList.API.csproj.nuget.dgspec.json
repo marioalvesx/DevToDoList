@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {}
+    "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {
+    "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
+        "projectUniqueName": "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
         "projectName": "DevToDoList.API",
-        "projectPath": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
+        "projectPath": "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\DevToDoList.API.csproj",
         "packagesPath": "C:\\Users\\mario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\obj\\",
+        "outputPath": "c:\\Users\\mario\\Documents\\Projects\\Personal\\C# Studies\\DevStudyNotes\\DevToDoList\\src\\DevToDoList.API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -21,7 +21,6 @@
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -57,6 +56,14 @@
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[6.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
