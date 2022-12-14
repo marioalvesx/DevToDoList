@@ -10,22 +10,26 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DevTodoList");
 
 builder.Services.AddDbContext<DevTodoDbContext>(
-    // o => o.UseInMemoryDatabase("DevTodoDb")
-    o => o.UseSqlServer(connectionString)
+    o => o.UseInMemoryDatabase("DevTodoDb")
 );
 
+// builder.Services.AddDbContext<DevTodoDbContext>(
+//     // o => o.UseInMemoryDatabase("DevTodoDb")
+//     o => o.UseSqlServer(connectionString)
+// );
+
 // Configuration to Serilog database registration.
-builder.Host.ConfigureAppConfiguration((hostingContext, config) => {
-    Serilog.Log.Logger = new LoggerConfiguration()
-        .Enrich.FromLogContext()
-        .WriteTo.MSSqlServer(connectionString,
-            sinkOptions: new MSSqlServerSinkOptions() {
-                AutoCreateSqlTable = true,
-                TableName = "Logs"
-            })
-        .WriteTo.Console()
-        .CreateLogger();
-}).UseSerilog();
+// builder.Host.ConfigureAppConfiguration((hostingContext, config) => {
+//     Serilog.Log.Logger = new LoggerConfiguration()
+//         .Enrich.FromLogContext()
+//         .WriteTo.MSSqlServer(connectionString,
+//             sinkOptions: new MSSqlServerSinkOptions() {
+//                 AutoCreateSqlTable = true,
+//                 TableName = "Logs"
+//             })
+//         .WriteTo.Console()
+//         .CreateLogger();
+// }).UseSerilog();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

@@ -21,10 +21,6 @@ namespace DevToDoList.API.Controllers
         [HttpGet]
         public IActionResult GetAll() {
             var devTodos = _context.DevTodos.ToList();
-
-            Log.Information("GetAll is called");
-
-            throw new Exception("GetAll threw an error.");
             return Ok(devTodos);
         }
 
