@@ -4,7 +4,6 @@ using DevToDoList.API.Persistence;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Models;
-using Serilog;
 
 namespace DevToDoList.API.Controllers
 {
