@@ -1,0 +1,41 @@
+﻿@page "/"
+@inject HttpClient Http
+
+<h1>Dev to-do list</h1>
+
+<div class="uk-margin">
+    
+</div>
+<div class="uk-margin">
+    <div class="uk-inline uk-width-1-1">
+        <button class="uk-form-icon uk-form-icon-flip" uk-icon="icon: plus-circle" @onclick='AddNewTask'></button>
+        <input class="uk-input uk-form-large uk-width-1-1" placeholder="Nova da tarefa" @bind="newTodo"/>
+    </div>
+</div>
+
+<hr>
+
+@if (true)
+{
+  
+}
+
+<ul class="uk-list uk-list-divider uk-list-large">
+    @foreach (var item in todos)
+    {
+        <li>
+            <label>
+                <input class="uk-checkbox" type="checkbox" @bind="item.IsDone" /> @item.Title
+            </label>
+        </li>
+    }
+</ul>
+
+@code {
+  @* private List<Todos> todos;
+
+  protected override async Task OnInitializedAsync() {
+    Todos = await Http.GetFromJsonAsync<List<DevTodo>>("api/dev-todo");
+  } *@
+
+}
