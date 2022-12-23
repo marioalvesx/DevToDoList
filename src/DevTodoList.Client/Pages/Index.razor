@@ -1,5 +1,5 @@
 ﻿@page "/"
-@inject HttpClient Http
+@inject IDevTodoService DevTodoService
 
 <h1>Dev to-do list</h1>
 
@@ -8,34 +8,31 @@
 </div>
 <div class="uk-margin">
     <div class="uk-inline uk-width-1-1">
-        <button class="uk-form-icon uk-form-icon-flip" uk-icon="icon: plus-circle" @onclick='AddNewTask'></button>
-        <input class="uk-input uk-form-large uk-width-1-1" placeholder="Nova da tarefa" @bind="newTodo"/>
+        <button class="uk-form-icon uk-form-icon-flip" uk-icon="icon: plus-circle" @* @onclick='AddNewTask' *@></button>
+        <input class="uk-input uk-form-large uk-width-1-1" placeholder="Nome da tarefa" @* @bind="newTodo" *@/>
     </div>
 </div>
 
+@* <input class="uk-checkbox" type="checkbox" />  *@
+
 <hr>
 
-@if (true)
-{
-  
-}
-
 <ul class="uk-list uk-list-divider uk-list-large">
-    @foreach (var item in todos)
+    @foreach (var todo in DevTodoService.DevTodo)
     {
         <li>
             <label>
-                <input class="uk-checkbox" type="checkbox" @bind="item.IsDone" /> @item.Title
+                <h3>@todo.Title</h3>
+                <input class="uk-checkbox" type="checkbox" @bind="todo.Done" /> @todo.Description
             </label>
         </li>
     }
 </ul>
 
 @code {
-  @* private List<Todos> todos;
 
   protected override async Task OnInitializedAsync() {
-    Todos = await Http.GetFromJsonAsync<List<DevTodo>>("api/dev-todo");
-  } *@
+    await DevTodoService.GetAll();
+  }
 
 }

@@ -9,14 +9,22 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DevTodoList");
 
-builder.Services.AddDbContext<DevTodoDbContext>(
-    o => o.UseInMemoryDatabase("DevTodoDb")
-);
-
 // builder.Services.AddDbContext<DevTodoDbContext>(
-//     // o => o.UseInMemoryDatabase("DevTodoDb")
-//     o => o.UseSqlServer(connectionString)
+//     o => o.UseInMemoryDatabase("DevTodoDb")
 // );
+
+builder.Services.AddCors( options => {
+   options.AddDefaultPolicy( 
+    policy =>
+    { 
+      policy.WithOrigins("http://localhost:5286");
+    });
+});
+
+builder.Services.AddDbContext<DevTodoDbContext>(
+    // o => o.UseInMemoryDatabase("DevTodoDb")
+    o => o.UseSqlServer(connectionString)
+);
 
 // Configuration to Serilog database registration.
 // builder.Host.ConfigureAppConfiguration((hostingContext, config) => {
@@ -59,6 +67,8 @@ if (true) // For production in Azure
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors();
 
 app.UseHttpsRedirection();
 

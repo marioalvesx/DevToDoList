@@ -2,8 +2,10 @@ using DevTodoList.Client.Models;
 
 namespace DevTodoList.Client.Services
 {
-    public class IDevTodoService
+    public interface IDevTodoService
     {
-        Task<List<DevTodo>> GetAll();
+        List<DevTodo> DevTodo { get; set; }
+        Task GetAll();
+        Task<DevTodo> GetById(int id);
     }
 }
