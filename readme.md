@@ -24,7 +24,8 @@ and after that:
 ```bash
 dotnet run
 ```
-Remember that you also need to have the database installed locally and configured with the correct credentials in the 'appsettings.json' file:
+Remember that to show the frontend of the application the backend must be running. 
+You also need to have the database installed locally and configured with the correct credentials in the 'appsettings.json' file:
 
 ```json
 "ConnectionStrings": {
@@ -36,6 +37,9 @@ And the Entity Framework installed with the following packages:
 - **Microsoft.EntityFrameworkCore.InMemory**
 - **Microsoft.EntityFrameworkCore.SQLServer**
 - **Microsoft.EntityFrameworkCore.Design**
+
+## Communication beetween BackEnd and FrontEnd:
+...
 
 ## ✨ Show your support
 Give a ⭐️ if this project helped you or inspired you in some way!
