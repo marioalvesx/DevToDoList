@@ -27,7 +27,6 @@ namespace DevToDoList.API.Controllers
         // api/dev-todo/1 HTTP GET
         [HttpGet("{id}")]
         public IActionResult GetById(int id) {
-            // Talvez retornar NoteFound
             var devTodo = _context.DevTodos
                 .Include(s => s.Reactions)
                 .SingleOrDefault(s => s.Id == id);
@@ -49,7 +48,6 @@ namespace DevToDoList.API.Controllers
         /// <response code="201">Success</response>
         [HttpPost]
         public IActionResult Post(DevTodoInputModel model) {
-            // Talvez retornar BadRequest
             var devTodo = new DevTodo(model.Title, model.Description, model.Done);
 
             _context.DevTodos.Add(devTodo);
@@ -61,7 +59,6 @@ namespace DevToDoList.API.Controllers
         // api/dev-todo/1/reactions HTTP POST
         [HttpPost("{id}/reactions")]
         public IActionResult PostReaction(int id, ReactionDevTodoInputModel model) {
-            // Talvez NotFound / Bad Request
             var devTodo = _context.DevTodos.SingleOrDefault(s => s.Id == id);
 
             if (devTodo == null)

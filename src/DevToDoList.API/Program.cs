@@ -16,9 +16,9 @@ var connectionString = builder.Configuration.GetConnectionString("DevTodoList");
 builder.Services.AddCors( options => {
    options.AddDefaultPolicy( 
     policy =>
-    { 
-      policy.WithOrigins("http://localhost:5286");
-    });
+        { 
+        policy.WithOrigins("http://localhost:5286");
+        });
 });
 
 builder.Services.AddDbContext<DevTodoDbContext>(

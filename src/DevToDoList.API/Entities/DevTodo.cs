@@ -1,3 +1,6 @@
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace DevToDoList.API.Entities
 {
     public class DevTodo
@@ -13,19 +16,27 @@ namespace DevToDoList.API.Entities
         }
 
         public int Id { get; private set; }
+
+        [Required]
+        [MaxLength(20)]
         public string Title { get; private set; }
         public string Description { get; private set; }
         public bool IsDone { get; private set; }
         public DateTime CreatedAt { get; private set; }
         public List<DevTodoReaction> Reactions { get; private set; }
+        private int LimitLength = 20;
 
-        public void AddReaction(bool isPositive) {
-            // if (!IsDone) // Só manda a reação se tiver concluida a tarefa
-            //     throw new InvalidOperationException();
+        public bool TitleLengthValid() {
+            if (Title.Count() > LimitLength)
+                return false;
             
-            Reactions.Add(new DevTodoReaction(isPositive));
-        
+            return true;
         }
+
+        public bool AddReaction(bool isPositive) {
+            Reactions.Add(new DevTodoReaction(isPositive));
+            return true;
+        }        
 
     }
 }
