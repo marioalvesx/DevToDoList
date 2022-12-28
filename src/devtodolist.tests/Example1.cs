@@ -31,6 +31,7 @@ namespace devtodolist.tests
             var result = devTodo.AddReaction(true);
 
             // Assert
+            Assert.NotNull(devTodo);
             Assert.Equal(expected, result);
 
         }
