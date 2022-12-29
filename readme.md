@@ -43,5 +43,5 @@ And the Entity Framework installed with the following packages:
 
 ## ✨ Show your support
 Give a ⭐️ if this project helped you or inspired you in some way!
-Get in touch with me: <a href="https://www.linkedin.com/in/marioalvesneto/">LinkedIn</a>
+Get in touch with me: <a href="https://www.linkedin.com/in/marioalvesneto/">LinkedIn</a><br>
 Made with 💜 by Mario Alves.
