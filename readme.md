@@ -39,8 +39,9 @@ And the Entity Framework installed with the following packages:
 - **Microsoft.EntityFrameworkCore.SQLServer**
 - **Microsoft.EntityFrameworkCore.Design**
 
-## Communication beetween BackEnd and FrontEnd:
-...
+## Communication between BackEnd and FrontEnd:
+API consumed by Blazor Web Assembly.
+To execute it the api must be running in second plan.
 
 ## ✨ Show your support
 Give a ⭐️ if this project helped you or inspired you in some way!
