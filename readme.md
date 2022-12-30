@@ -1,7 +1,8 @@
-<p align="center">
-
-</p>
 <h1 align="center"> 📝 Dev To Do List </h1>
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/22736436/210109840-9329065a-0c8f-40b6-bc30-f43864ba4f0e.gif" alt="demo" height="395">
+</p>
+<hr />
 
 ## 🔍 About
 This is a simple Todo List type application with a backend and frontend (focused on the backend with ASP.Net Core) that i use to study and apply some concepts used in real world applications problems. It was built from the beginning, the built of a solid API, and the final stage, publish in the Cloud.
