@@ -19,9 +19,18 @@ namespace DevTodoList.Client.Services
                 DevTodo = response;
         }
 
+        public async Task AddTodo(DevTodo todo) {
+            // var addItem = new DevTodo { Title = title, Description = description, Done = done };
+            var response = await _http.PostAsJsonAsync(apiConnection + "/api/dev-todo", todo);
+            if(response.IsSuccessStatusCode)
+            {
+                System.Console.WriteLine("Added todo!");
+            }
+        }
+
         public Task<DevTodo> GetById(int id)
         {
             throw new NotImplementedException();
         }
-  }
+    }
 }

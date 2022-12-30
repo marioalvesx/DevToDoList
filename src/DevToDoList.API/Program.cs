@@ -17,7 +17,7 @@ builder.Services.AddCors( options => {
    options.AddDefaultPolicy( 
     policy =>
         { 
-        policy.WithOrigins("http://localhost:5286");
+            policy.WithOrigins("http://localhost:5286");
         });
 });
 
@@ -68,7 +68,9 @@ if (true) // For production in Azure
     app.UseSwaggerUI();
 }
 
-app.UseCors();
+app.UseCors(
+    x => x.AllowAnyMethod().AllowAnyHeader().AllowAnyOrigin()
+);
 
 app.UseHttpsRedirection();
 

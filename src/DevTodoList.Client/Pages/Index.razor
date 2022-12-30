@@ -1,38 +1,46 @@
 ﻿@page "/"
+@using Models
 @inject IDevTodoService DevTodoService
 
 <h1>Dev to-do list</h1>
+<div class="uk-margin"></div>
 
-<div class="uk-margin">
-    
-</div>
 <div class="uk-margin">
     <div class="uk-inline uk-width-1-1">
-        <button class="uk-form-icon uk-form-icon-flip" uk-icon="icon: plus-circle" @* @onclick='AddNewTask' *@></button>
-        <input class="uk-input uk-form-large uk-width-1-1" placeholder="Nome da tarefa" @* @bind="newTodo" *@/>
+        <input class="uk-input uk-form-large uk-width-1-1" placeholder="Todo title" @bind="newTodoTitle"/>
+        <button class="uk-form-icon uk-form-icon-flip" uk-icon="icon: plus-circle" @onclick='AddNewTodo'></button>
+        <input class="uk-input uk-form-large uk-width-1-1" placeholder="Todo description" @bind="newTodoDesc"/>
     </div>
 </div>
-
-@* <input class="uk-checkbox" type="checkbox" />  *@
-
 <hr>
 
 <ul class="uk-list uk-list-divider uk-list-large">
     @foreach (var todo in DevTodoService.DevTodo)
     {
-        <li>
-            <label>
-                <h3>@todo.Title</h3>
-                <input class="uk-checkbox" type="checkbox" @bind="todo.Done" /> @todo.Description
-            </label>
-        </li>
+        @if (todo == null) {
+            <p>There is no To dos created.</p>
+        } else {
+            <li>
+                <label>
+                    <p>@todo.Title</p>
+                    <input class="uk-checkbox" type="checkbox" @bind="todo.Done" /> @todo.Description
+                </label>
+            </li>
+        }
     }
 </ul>
 
 @code {
+    private string? newTodoTitle;
+    private string? newTodoDesc;
 
-  protected override async Task OnInitializedAsync() {
-    await DevTodoService.GetAll();
-  }
+    protected async Task AddNewTodo() {
+        DevTodo addItem = new DevTodo { Title = newTodoTitle, Description = newTodoDesc, Done = false };
+        await DevTodoService.AddTodo(addItem);
+    }
+
+    protected override async Task OnInitializedAsync() {
+        await DevTodoService.GetAll();
+    }
 
 }

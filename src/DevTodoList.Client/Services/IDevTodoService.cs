@@ -6,6 +6,7 @@ namespace DevTodoList.Client.Services
     {
         List<DevTodo> DevTodo { get; set; }
         Task GetAll();
+        Task AddTodo(DevTodo devTodo);
         Task<DevTodo> GetById(int id);
     }
 }
