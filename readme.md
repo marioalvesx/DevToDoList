@@ -12,6 +12,7 @@ This is a simple Todo List type application with a backend and frontend (focused
 * Swagger
 * Serilog
 * Blazor
+* Style: https://getuikit.com/v2/docs
 * EF Core
 * Azure App Service
 
