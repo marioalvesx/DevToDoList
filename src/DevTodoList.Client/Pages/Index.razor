@@ -23,7 +23,7 @@
             <li>
                 <label>
                     <p>@todo.Title</p>
-                    <input class="uk-checkbox" type="checkbox" @bind="todo.Done" /> @todo.Description
+                    <input class="uk-checkbox" type="checkbox" @bind="todo.Done" /> @todo.Description <i class="trash" />
                 </label>
             </li>
         }
@@ -37,6 +37,7 @@
     protected async Task AddNewTodo() {
         DevTodo addItem = new DevTodo { Title = newTodoTitle, Description = newTodoDesc, Done = false };
         await DevTodoService.AddTodo(addItem);
+        await DevTodoService.GetAll();
     }
 
     protected override async Task OnInitializedAsync() {
